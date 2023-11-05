@@ -17,19 +17,13 @@ This project is a web application designed to support and enhance the experience
 ## Demo
 
 
+https://github.com/cavxs/munarc-website/assets/113210591/399c3f74-b49a-4cf0-b249-fdce46a21b4a
 
-<video width="320" height="240" controls>
-  <source src="https://github.com/cavxs/munarc-website/raw/main/pictures/Munarc_Home_Page.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<video width="320" height="240" controls>
-  <source src="https://github.com/cavxs/munarc-website/raw/main/pictures/Munarc_Other_Page.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
-<video width="320" height="240" controls>
-  <source src="https://github.com/cavxs/munarc-website/raw/main/pictures/Munarc_Responsive.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+https://github.com/cavxs/munarc-website/assets/113210591/ce420233-4a68-4086-8a6a-326330a1f4b2
+
+https://github.com/cavxs/munarc-website/assets/113210591/4b02bae6-d812-49b0-9a0b-f9acd5ea366b
+
+
 
 ## Installation
 
