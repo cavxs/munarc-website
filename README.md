@@ -16,16 +16,18 @@ This project is a web application designed to support and enhance the experience
 
 ## Demo
 
+
+
 <video width="320" height="240" controls>
-  <source src="./pictures/Munarc Home Page.mp4" type="video/mp4">
+  <source src="https://github.com/cavxs/munarc-website/raw/main/pictures/Munarc%20Home%20Page.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <video width="320" height="240" controls>
-  <source src="./pictures/Munarc Other Page.mp4" type="video/mp4">
+  <source src="https://github.com/cavxs/munarc-website/raw/main/pictures/Munarc%20Other%20Page.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 <video width="320" height="240" controls>
-  <source src="./pictures/Munarc Responsive.mp4" type="video/mp4">
+  <source src="https://github.com/cavxs/munarc-website/raw/main/pictures/Munarc%20Responsive.mp4" type="video/mp4">
   Your browser does not support the video tag.
 </video>
 
