@@ -1,0 +1,97 @@
+.header {
+    margin-top: 160px;
+}
+
+h1.day {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 34px;
+
+    margin: 60px auto 40px;
+    width: fit-content;
+
+    color: #343D45;
+} 
+
+
+ul.timings {
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    padding: 0;
+    list-style: none;
+}
+
+ul.timings li {
+    position: relative;
+    width: 100%;
+    background-color: #343D45;
+    height: fit-content;
+    padding: 10px 40px 10px;
+    box-sizing: border-box;
+    left: 0;
+
+    transition: all 0.3s;
+}
+
+ul.timings li span {
+    font-size: 30px;
+    font-weight: bold;
+    color: #F5F2EE;
+}
+
+ul.timings li .times {
+    font-size: 32px;
+}
+
+ul.timings li .name {
+    float: right;
+}
+
+ul.timings li .name.s {
+    color: #FDFD69;
+}
+
+ul.timings li:nth-child(2n) {
+    background-color: #51606C;
+}
+
+ul.timings li:hover {
+    width: 104%;
+    left: -2%;
+
+    background-color: #FF9200;
+}
+
+
+@media screen and (max-width: 1000px) {
+    ul.timings {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    ul.timings {
+        width: 95%;
+    }
+
+    ul.timings li {
+        padding: 10px 10px;   
+    }
+}
+
+@media screen and (max-width: 500px) {
+    ul.timings li .times {
+        font-size: 20px;
+    }
+
+    ul.timings li span {
+        font-size: 20px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    ul.timings {
+        width: 95%;
+    }
+}

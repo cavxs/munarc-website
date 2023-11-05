@@ -1,0 +1,63 @@
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.header h1 {
+    margin-top: 200px;
+}
+
+.header.snd h1 {
+    margin-top: 50px;
+}
+
+.body p {
+    position: relative;
+    font-family: "Quicksand", sans-serif;
+    font-weight: normal;
+    font-size: 30px;
+    color: #F5F2EE;
+    padding: 3%;
+    width: 95%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgba(52, 61, 69, 0.75);
+    border-radius: 40px;
+}
+
+.body p::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    position: absolute;
+    z-index: -1;
+    border-radius: 40px;
+    background-image: url(../src/beehive-pattern.jpg);
+    background-repeat: repeat;
+}
+
+.body p::first-letter {
+    font-size: 80px;
+    color: #FDFD69;
+    font-weight: bold;
+}
+
+.body p span {
+    color: #fff;
+    font-weight: bold;
+}
+
+@media screen and (max-width: 740px) {
+    .body p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+    .body p::first-letter {
+        font-size: 50px;
+    }
+}

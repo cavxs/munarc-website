@@ -1,0 +1,517 @@
+.head {
+    display: block;
+    position: relative;
+    background: url(../src/newhomehead.jpg) #3a444e;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+}
+
+.head .video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+
+    overflow: hidden;
+
+    transition: all 2s;
+}
+
+.head .video video {
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+}
+
+.head .video.show {
+    opacity: 1;
+    background-color: black;
+}
+
+.head:has(.video.show){
+    background-color: black;
+} 
+
+.head .heading {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+    top: 45%;
+    margin: 0 auto;
+    pointer-events: none;
+}
+
+.head h1 {
+    position: relative;
+    width: 100%;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 65pt;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.head .hr {
+    position: relative;
+    display: block;
+    width: 80%;
+    height: 3px;
+    background-color: #dacb8d;
+    margin-top: 0;
+    margin-bottom: 40px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.head h2 {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    font-size: 17pt;
+    text-align: center;
+    letter-spacing: 5pt;
+}
+
+.head img {
+    position: absolute;
+    width: 100%;
+    bottom: -1px;
+    left: 0;
+}
+
+.head.hidden .heading {
+    opacity: 0.4;
+    
+    transition: opacity 1s;
+}
+
+.base-timer {
+    position: absolute;
+    height: 30px;
+    width: 30px;
+    bottom: 70px;
+    left: 20px;
+
+    transition: 0.05s;
+}
+  
+.base-timer__circle {
+    fill: none;
+    stroke: none;
+}
+
+.base-timer__path-elapsed {
+    stroke-width: 10px;
+    stroke: grey;
+}
+
+.base-timer__label {
+    position: absolute;
+    
+    font-family: "Lato", sans-serif;
+
+    width: 30px;
+    height: 30px;
+
+    top: 0;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 13px;
+}
+
+.base-timer__path-remaining {
+    stroke-width: 10px;
+
+    stroke-linecap: round;
+
+    transform: rotate(90deg);
+    transform-origin: center;
+
+    transition: 1s linear all;
+
+    stroke: currentColor;
+}
+
+.base-timer__svg {
+    transform: scaleX(-1);
+}
+
+.base-timer.hide {
+    opacity: 0;
+}
+
+/* -80px for the size of the navigation */
+.welcome-section {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    margin-bottom: 150px;
+}
+
+.welcome-section > div {
+    display: block;
+    position: relative;
+    width: 100%;
+}
+
+.welcome-section .header {
+    height: fit-content;
+}
+
+.welcome-section .body .text::before { 
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    border-radius: 40px;
+    background: rgba(52, 61, 69, 0.75);
+    z-index: -1;
+}
+
+.welcome-section .body {
+    height: fit-content;
+}
+
+.welcome-section .body .text {
+    position: relative;
+    background: url(../src/beehive-pattern.jpg) repeat;
+    width: 85%;
+    height: 100%;
+    border-radius: 40px;
+    margin: 0 auto;
+    padding: 40px 40px;
+    box-sizing: border-box;
+}
+
+.welcome-section .body p {
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 27px;
+    color: #F5F2EE;
+    text-align: justify;
+    line-height: 38px;
+}
+
+
+.welcome-section .body .person {
+    position: absolute;
+    width: fit-content;
+    height: 50px;
+    right: 70px;
+    bottom: -60px;
+}
+
+.welcome-section .body h3 {
+    position: relative;
+    display: inline-block;
+    color: #140B02;
+    font-size: 23px;
+}
+
+.welcome-section .body img {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    top: 30%;
+    margin-left: 5px;
+}
+
+.goals-section {
+    width: 100%;
+    height: fit-content;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.03);
+    padding: 30px 0;
+    padding-bottom: 100px;
+}
+
+
+.goals-section .header {
+    height: fit-content;
+}
+
+.goals-section .body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: fit-content;
+}
+
+.goals-section .body > div {
+    position: relative;
+    margin: 0 10px;
+}
+
+.goals-section .body > div > div {
+    background-color: #343D45;
+    height: 275px;
+    margin: 100px auto;
+    box-shadow: 0 2 4px rgba(0,0,0,0.5);
+    transition: 0.3s;
+}
+
+.goals-section .body > div > div span {
+    height: 275px;
+}
+
+.goals-section .body > div > div:before,
+.goals-section .body > div > div:after {
+    box-shadow: 0 2 4px rgba(0,0,0,0.5);
+}
+
+.goals-section .body > div > div:hover {
+    transform: translateY(-10px);
+    background-color: #E8AD23;
+}
+
+.goals-section .body > div > div > img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;    
+    z-index: 2;
+    pointer-events: none;
+}
+
+.goals-section .body > div > p {
+    color: #140B02;
+    width: 300px;
+    margin: 0 auto;
+    font-size: 20px;
+    text-align: center;
+}
+
+
+.committees-section .header {
+    height: fit-content;
+}
+
+.committees-section .body::-webkit-scrollbar {
+    display: none;
+}
+
+.committees-section .body {
+    height: 450px;
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    cursor: pointer;
+    padding-top: 30px; /* for the div animation inside of it */
+
+    transition: all 0.2s;
+    transform: scale(0.98);
+    /* padding-left: 100px;
+    padding-right: 100px; */
+}
+
+.committees-section .body.active {
+    cursor: grabbing;
+    cursor: -webkit-grabbing;
+    transform: scale(1);
+}
+
+.committees-section .body > div {
+    display: inline-block;
+    margin-right: 100px;
+    background-color: #343D45;
+    height: 275px;
+    box-shadow: 0 2 4px rgba(0,0,0,0.5);
+    -webkit-touch-callout: none; 
+    -webkit-user-select: none; 
+    -khtml-user-select: none; 
+    -moz-user-select: none; 
+    -ms-user-select: none; 
+    user-select: none;
+    
+    transition: 0.2s;
+}
+
+.committees-section .body > div > img {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;    
+    z-index: 2;
+    pointer-events: none;
+}
+
+.committees-section .body > div > p {
+    font-family: "Quicksand", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    text-align: center;
+    
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+
+    z-index: 2;
+    pointer-events: none;
+}   
+
+.committees-section .body > div:hover {
+    transform: translateY(-20px);
+}
+/* Committee division colors */
+.committees-section .body > div:first-child {
+    margin-left: 100px;
+    background-color: #FFB300;
+}
+
+.committees-section .body > div:nth-child(2) {
+    background-color: #EBBB4B;
+}
+
+.committees-section .body > div:nth-child(3) {
+    background-color: #F7C03E;
+}
+
+.committees-section .body > div:nth-child(4) {
+    background-color: #A3770F;
+}
+
+.committees-section .body > div:nth-child(5) {
+    background-color: #FAD57F;
+}   
+
+.committees-section .body > div:last-child {
+    background-color: #E8AD23;
+}
+
+/* end of committee division colors */
+
+.committees-section .body > div span {
+    height: 275px;
+}
+
+.apply-section {
+    width: 100%;
+    height: 600px;
+    margin-top: 150px;
+    background: url(../src/flag-un.jpg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: 0.4s;
+}
+
+.apply-section > div {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    top: 30%;
+    margin: 0 auto;
+    border-radius: 20px;
+}
+
+.apply-section > div h1 {
+    font-family: "Quicksand", sans-serif;
+    font-weight: 200;
+    font-size: 50px;
+    text-align: center;
+    color: #fff;
+}
+
+.apply-section > div button {
+    position: relative;
+    border: solid 3px #fff;
+    background-color: transparent;
+    width: 300px;
+    height: 80px;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 400;
+    font-size: 40px;
+    color: #fff;
+    margin: 30px auto;
+    display: block;
+    cursor: pointer;
+
+    transition: 0.3s;
+    border-radius: 100px;
+}
+
+.apply-section > div button:hover {
+    box-shadow: inset 300px 0 0 0 #FFB300;
+    border: solid 3px #FFB300;
+}
+
+.apply-section > div button::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    border-radius: 100px;
+
+    transition: 0.3s;
+}
+.apply-section > div button:hover::before {
+    box-shadow: 0 5px 15px rgba(255, 179, 0, 1);
+}
+
+.apply-section.darken {
+    box-shadow: 0 0 600px rgba(0,0,0,1) inset;
+}
+
+@media screen and (max-width: 740px) {
+    .welcome-section .body .text {
+        width: 95%;
+    }
+    .welcome-section .body p {
+        font-size: 20px;
+        line-height: 30px;
+    }
+
+    .base-timer {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .welcome-section .body .person {
+        width: 0;
+        left: 50%;
+        bottom: -60px;
+    }
+    .welcome-section .body h3 {
+        position: relative;
+        color: #140B02;
+        font-size: 23px;
+        text-align: center;
+        margin-left: -91.5px;
+        white-space: nowrap;
+    }
+    .welcome-section .body img {
+        position: relative;
+        display: block;
+        width: 60px;
+        transform: translateX(-50%);
+    }
+    .head .video video {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .head h1 {
+        font-size: 55pt;
+    }
+}

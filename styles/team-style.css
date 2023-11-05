@@ -1,0 +1,793 @@
+.heading {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.heading .heading1 {
+    margin-top: 100px;
+}
+
+.executive {
+    width: 100%;
+    height: fit-content;
+    pointer-events: none;
+}
+
+.imp {
+    position: relative;
+    margin-top: 200px;
+    width: 100%;
+    height: fit-content;
+    pointer-events: none;
+}
+
+.imp .bg {
+    position: relative;
+    background-color: #343d45;
+    width: 650px;
+    height: 250px;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* .imp .bg::before {
+    display: block;
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    position: relative;
+    border: solid 4px black;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 20px;
+} */
+
+.imp .bg h1 {
+    position: absolute;
+    width: 100%;
+    font-size: 40px;
+    text-align: center;
+    bottom: 75px;
+    color: #ededed;
+}
+
+.imp h2 {
+    position: absolute;
+    font-family: "Lato", sans-serif;
+    font-weight: 300;
+    font-size: 50px;
+    color: black;
+    left: 10px;
+    bottom: 0;
+
+    transform-origin: 0 0;
+    transform: rotate(-90deg);
+}
+
+.bottom-sticker {
+    display: flex;
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    height: 200px;
+    z-index: 2;
+    bottom: 20px;
+}
+
+.bottom-sticker .wrapper {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    overflow: hidden;
+    align-items: center;
+}
+
+.bottom-sticker .wrapper:nth-child(1) {
+    top: -20px;
+}
+.bottom-sticker .wrapper:nth-child(2) {
+    position: relative;
+    bottom: 20px;
+}
+
+.bottom-sticker .wrapper:nth-child(3) {
+    bottom: 0;
+}
+
+
+.bottom-sticker h1 {
+    position: absolute;
+    width: 100%;
+    font-family: "Coda", serif;
+    font-size: 100px;
+    font-weight: 800;
+    text-align: center;
+    bottom: 0;
+    transition: bottom 0.3s;
+}
+
+.bottom-sticker .unshown {
+    bottom: -100%; 
+}
+
+.bottom-sticker h1.team {
+    position: absolute;
+    color: #ffffff;
+    
+    line-height: 70px;
+    letter-spacing: 10px;
+    -webkit-text-stroke: 1px black;
+    transition: left 2s, bottom 0.3s;
+}
+
+.bottom-sticker .team:nth-child(2) {
+    left: 100%;
+    transition: left 0.2s;
+}
+
+.bottom-sticker.switch .team:nth-child(1) {
+    left: -100%;
+}
+
+.bottom-sticker.switch .team:nth-child(2) {
+    left: 0;
+}
+
+.bottom-sticker .class {
+    color: #DACB8D;
+    font-size: 60px;
+}
+
+.bottom-sticker .committee {
+    color: black;
+    font-size: 50px;
+}
+
+.bottom-sticker img {
+    position: absolute;
+    right: 3%;
+    bottom: 0;
+    height: 80px;
+    transform: rotate(180deg);
+    cursor: pointer;
+
+    transition: 0.1s;
+}
+.bottom-sticker .chngpgleft {
+    left: 3%;
+    transform: none;
+}
+
+.bottom-sticker .chngpgleft.hidden {
+    left: -31px;
+}
+
+.bottom-sticker .chngpgright.hidden {
+    right: -31px;
+}
+
+.chair-board {
+    display: flex;
+    position: relative;
+    width: 95%;
+    height: 590px;
+    margin: 100px auto;
+    pointer-events: all;
+    background: url(../src/beehive-pattern.jpg) repeat;
+    border-radius: 100px;
+}
+
+.chair-board::before {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 100px;
+    background-color:rgba(52, 61, 69, 0.75);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+}
+
+.chair-board .viewer {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75%;
+    overflow: hidden;
+
+    align-self: center;
+}
+.chair-board .viewer .mover::-webkit-scrollbar {
+    display: none;
+}
+.chair-board .viewer .mover {
+    display: flex;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    white-space: nowrap;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.chair-board .viewer .mover .group:first-child {
+    margin-left: 400px;
+}
+
+.chair-board .viewer .mover .group:last-child {
+    padding-right: 400px;
+}
+
+.chair-board .viewer .mover .group {
+    display: inline-flex;
+    margin-right: 200px;
+    align-self: center;
+}
+
+.chair-board .viewer .mover .mem {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+    margin: 150px 10px 0;
+}
+
+.chair-board .viewer .mover .mem .bg {
+    background-color: #FFB300;
+    width: 150px;
+    height: 240px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s;
+}
+
+
+.chair-board .viewer .mover .group .mem .bg h1,
+.chair-board .viewer .mover  .group .mem .bg h2 {
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.chair-board .viewer .mover .group .mem .bg h1 {
+    font-size: 20px;
+    color: #fff;
+    bottom: 100px;
+}
+
+.chair-board .viewer .mover .group .mem .bg h2 {
+    font-size: 13px;
+    color: #fff;
+    bottom: 80px;
+}
+
+.chair-board .viewer .mover .group.selected .mem .bg h1 {
+    font-size: 30px;
+    color: black;
+    bottom: 100px;
+}
+
+.chair-board .viewer .mover .group.selected .mem .bg h2 {
+    font-size: 18px;
+    color: black;
+    bottom: 80px;
+}
+
+.chair-board .viewer .mover .group.selected {
+    justify-self: center;
+    align-self: flex-end;
+}
+
+.chair-board .viewer .mover .group.selected .mem .bg {
+    background-color: #F5F2EE;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+/* Big Hexagon multi-use */
+.hexagonbig {
+    position: absolute;
+    width: 200px; 
+    height: 115.47px;
+    margin: 57.74px 0;
+    background-image: url(http://csshexagon.com/img/meow.jpg);
+    background-size: auto 230.9401px;
+    background-position: center;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+    left: 50%;
+    transform: translateY(-100%) translateX(-50%);;
+    z-index: 2;
+}
+
+.hexagonbig .hexTop,
+.hexagonbig .hexBottom {
+    position: absolute;
+    z-index: 1;
+    width: 141.42px;
+    height: 141.42px;
+    overflow: hidden;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background: inherit;
+    left: 29.29px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.hexagonbig .hexTop:after,
+.hexagonbig .hexBottom:after {
+    content: "";
+    position: absolute;
+    width: 200.0000px;
+    height: 115.47005383792516px;
+    -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+    -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+    transform:          rotate(45deg) scaleY(1.7321) translateY(-57.7350px);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background: inherit;
+}
+
+.hexagonbig .hexTop {
+    top: -70.7107px;
+}
+
+.hexagonbig .hexTop:after {
+    background-position: center top;
+}
+
+.hexagonbig .hexBottom {
+    bottom: -70.7107px;
+}
+
+.hexagonbig .hexBottom:after {
+    background-position: center bottom;
+}
+
+.hexagonbig:after {
+    content: "";
+    position: absolute;
+    top: 0.0000px;
+    left: 0;
+    width: 200.0000px;
+    height: 115.4701px;
+    z-index: 2;
+    background: inherit;
+}
+
+  /* hexagon2 used for the committees */
+.hexagon2 {
+    position: absolute;
+    top: -50%;
+    left: 50%;
+    width: 100px; 
+    height: 57.74px;
+    margin: 28.87px 0;
+    background-image: url(http://csshexagon.com/img/meow.jpg);
+    background-size: auto 115.4701px;
+    background-position: center;
+    transform: translateY(100%) translateX(-50%);
+}
+
+.hexTop,
+.hexBottom {
+position: absolute;
+z-index: 1;
+width: 70.71px;
+height: 70.71px;
+overflow: hidden;
+-webkit-transform: scaleY(0.5774) rotate(-45deg);
+-ms-transform: scaleY(0.5774) rotate(-45deg);
+transform: scaleY(0.5774) rotate(-45deg);
+background: inherit;
+left: 14.64px;
+}
+
+/*counter transform the bg image on the caps*/
+.hexTop:after,
+.hexBottom:after {
+content: "";
+position: absolute;
+width: 100.0000px;
+height: 57.73502691896258px;
+-webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+-ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+transform:          rotate(45deg) scaleY(1.7321) translateY(-28.8675px);
+-webkit-transform-origin: 0 0;
+-ms-transform-origin: 0 0;
+transform-origin: 0 0;
+background: inherit;
+}
+
+.hexTop {
+top: -35.3553px;
+}
+
+.hexTop:after {
+background-position: center top;
+}
+
+.hexBottom {
+bottom: -35.3553px;
+}
+
+.hexBottom:after {
+background-position: center bottom;
+}
+
+.hexagon2:after {
+content: "";
+position: absolute;
+top: 0.0000px;
+left: 0;
+width: 100.0000px;
+height: 57.7350px;
+z-index: 2;
+background: inherit;
+}
+
+/* Hexagon */
+.chair-board .viewer .mover .group.selected .hexagon2,
+.crisis-team .mem .hexagon2,
+.organisation .hexagon2 {
+    position: relative;
+    width: 250px; 
+    height: 144.34px;
+    margin: 72.17px 0;
+    background-image: url(http://csshexagon.com/img/meow.jpg);
+    background-size: auto 288.6751px;
+    background-position: center;
+    top: 144px;
+    border-radius: 10px;
+
+    z-index: 2;
+    transform: translateX(-50%) translateY(0);
+}
+  
+.chair-board .viewer .mover .group.selected .hexagon2 .hexTop,
+.chair-board .viewer .mover .group.selected .hexagon2 .hexBottom,
+.crisis-team .mem .hexagon2 .hexTop,
+.crisis-team .mem .hexagon2 .hexBottom,
+.organisation .hexagon2 .hexTop,
+.organisation .hexagon2 .hexBottom {
+    position: absolute;
+    z-index: 1;
+    width: 176.78px;
+    height: 176.78px;
+    overflow: hidden;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background: inherit;
+    left: 36.61px;
+
+    border-radius: 10px;
+}
+  
+.chair-board .viewer .mover .group.selected .hexagon2 .hexTop:after,
+.chair-board .viewer .mover .group.selected .hexagon2 .hexBottom:after,
+.crisis-team .mem .hexagon2 .hexTop::after,
+.crisis-team .mem .hexagon2 .hexBottom::after,
+.organisation .hexagon2 .hexTop::after,
+.organisation .hexagon2 .hexBottom::after {
+    content: "";
+    position: absolute;
+    width: 250.0000px;
+    height: 144.33756729740645px;
+    -webkit-transform:  rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+    -ms-transform:      rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+    transform:          rotate(45deg) scaleY(1.7321) translateY(-72.1688px);
+    -webkit-transform-origin: 0 0;
+    -ms-transform-origin: 0 0;
+    transform-origin: 0 0;
+    background: inherit;
+
+    border-radius: 10px;
+}
+  
+.chair-board .viewer .mover .group.selected .hexagon2 .hexTop,
+.crisis-team .mem .hexagon2 .hexTop,
+.organisation .hexagon2 .hexTop {
+    top: -88.3883px;
+}
+
+.chair-board .viewer .mover .group.selected .hexagon2 .hexTop:after,
+.crisis-team .mem .hexagon2 .hexTop::after,
+.organisation .hexagon2 .hexTop::after {
+    background-position: center top;
+}
+
+.chair-board .viewer .mover .group.selected .hexagon2 .hexBottom,
+.crisis-team .mem .hexagon2 .hexBottom,
+.organisation .hexagon2 .hexBottom {
+    bottom: -88.3883px;
+}
+
+.chair-board .viewer .mover .group.selected .hexagon2 .hexBottom:after,
+.crisis-team .mem .hexagon2 .hexBottom::after,
+.organisation .hexagon2 .hexBottom::after {
+    background-position: center bottom;
+}
+
+.chair-board .viewer .mover .group.selected .hexagon2:after,
+.crisis-team .mem .hexagon2:after,
+.organisation .hexagon2::after {
+    content: "";
+    position: absolute;
+    top: 0.0000px;
+    left: 0;
+    width: 250.0000px;
+    height: 144.3376px;
+    z-index: 2;
+    background: inherit;
+
+    border-radius: 6.9px;
+}
+
+.crisis-team {
+    display: block;
+}
+
+.members {
+    display: block;
+}
+
+.member-organisor {
+    margin: 100px 0;
+    display: flex;
+    justify-content: space-between;
+    height: 500px;
+    padding: 0 50px;
+}
+
+.crisis-team .member-organisor:nth-child(3){
+    margin: -100px 0 100px;
+}
+
+.crisis-team .mem,
+.organisation .mem {
+    position: relative;
+    display: inline-block;
+    width: fit-content;
+    height: fit-content;
+    align-self: flex-end;
+    margin: 150px auto 0;
+}
+
+.crisis-team .mem .bg,
+.organisation .mem .bg {
+    background-color: #343d45;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    box-shadow: 5px 4px 10px rgba(0, 0, 0, 0.2);
+
+    transition: all 0.3s;
+}
+
+/* .crisis-team .bg::before,
+.organisation .mem .bg::before {
+    display: block;
+    content: "";
+    width: calc(100% + 10px);
+    height: calc(100% + 10px);
+    position: relative;
+    border: solid 4px black;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 20px; 
+} */
+
+.crisis-team .mem .bg h1,
+.crisis-team .mem .bg h2,
+.organisation .mem .bg h1,
+.organisation .mem .bg h2 {
+    pointer-events: none;
+    position: absolute;
+    text-align: center;
+    width: 100%;
+}
+.crisis-team .mem .bg h1,
+.organisation .mem .bg h1 {
+    font-size: 30px;
+    color: #ededed;
+    bottom: 100px;
+}
+
+.crisis-team .mem .bg h2,
+.organisation .mem .bg h2 {
+    font-size: 18px;
+    color: #eee;
+    bottom: 80px;
+}
+
+
+
+
+.academic {
+    pointer-events: none;
+    display: inline-block;
+    width: 100%;
+}
+
+.organisation {
+    position: absolute;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+}
+
+#main-container {
+    position: relative;
+    width: 100%; height: 100%;
+    overflow-x: hidden;
+}
+
+#main-viewer {
+    position: relative;
+    width: 100%;
+    height: fit-content;
+    white-space: nowrap;
+}
+
+/* Background */
+.background {
+    position: absolute;
+    width: 100%; height: 100%;
+    z-index: -1;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+#bggrid {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    padding: 0; /* Clears unordered list default of 40px */
+}
+
+#bggrid:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+#bggrid li {
+    list-style-type: none;
+    position: relative;
+    float: left;
+    width: 27.85714285714286%;
+    padding: 0 0 32.16760145166612% 0;
+    -o-transform: rotate(-60deg) skewY(30deg);
+    -moz-transform: rotate(-60deg) skewY(30deg);
+    -webkit-transform: rotate(-60deg) skewY(30deg);
+    -ms-transform: rotate(-60deg) skewY(30deg);
+    transform: rotate(-60deg) skewY(30deg);
+    background: #fd005f;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+#bggrid li * {
+    visibility: visible;
+}
+
+
+#bggrid li .bghexagon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #EEE;
+    -o-transform: skewY(-30deg) rotate(60deg);
+    -moz-transform: skewY(-30deg) rotate(60deg);
+    -webkit-transform: skewY(-30deg) rotate(60deg);
+    -ms-transform: skewY(-30deg) rotate(60deg);
+    transform: skewY(-30deg) rotate(60deg);
+    overflow: hidden;
+
+    transition: 0.3s;
+}
+
+#bggrid li .bghexagon:hover {
+    background: #fff;
+
+}
+
+#bggrid li:nth-child(3n+2) {
+    margin: 0 1%;
+}
+
+#bggrid li:nth-child(6n+4), #bggrid li:nth-child(6n+5), #bggrid li:nth-child(6n+6) {
+    margin-top: -6.9285714285%;
+    margin-bottom: -6.9285714285%;
+    -o-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -moz-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -webkit-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    -ms-transform: translateX(50%) rotate(-60deg) skewY(30deg);
+    transform: translateX(50%) rotate(-60deg) skewY(30deg);
+}
+
+#bggrid li:nth-child(6n+4) { 
+    margin-left: 0.5%;
+}
+
+
+@media screen and (max-width: 790px) {
+    .imp h2 {
+        font-family: "Quicksand", sans-serif;
+        font-weight: normal;
+        font-size: 40px;
+        color: #F5F2EE;
+        left: 50%;
+        bottom: 20px;
+        transform: translateX(-50%);
+    }
+    .member-organisor {
+        padding: 0 10px;
+    }
+    .bottom-sticker h1 {
+        font-size: 90px;    
+    }
+    .chair-board {
+        border-radius: 0;
+        width: 100%;
+    }
+    .chair-board::before {
+        width: 100%;
+        border-radius: 0;
+    }  
+}
+
+@media screen and (max-width: 690px) {
+    .member-organisor {
+        padding: 0;
+    }
+    .imp .bg {
+        width: 90%;
+    }
+    .bottom-sticker h1 {
+        font-size: 12vw;    
+    }
+    .bottom-sticker .class {
+        font-size: 8vw;
+    }
+    .bottom-sticker .committee {
+        font-size: 8vw;
+    }
+    .bottom-sticker img {
+        filter: brightness(0);
+        bottom: 100px;
+    }
+    .crisis-team .mem, .organisation .mem {
+        width: 48%;
+    }
+    .crisis-team .mem .bg, .organisation .mem .bg {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 580px) {
+    .member-organisor {
+        height: fit-content;
+        flex-direction: column;
+        margin: 0;
+    }
+    .crisis-team .mem, .organisation .mem {
+        margin: 0 auto;
+        width: 78%;
+    }
+}

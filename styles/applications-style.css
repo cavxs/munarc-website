@@ -1,0 +1,91 @@
+body{
+    padding-bottom: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+}
+
+.b {
+    position: relative;
+    width: 100%;
+    height: 80vh;
+    background: rgba(52, 61, 69, 0.75);
+    padding-top: 4%;
+}
+
+.b::before {
+    display: block;
+    content: "";
+    position: absolute;
+    width: 100%; height: 100%;
+    left: 0; top: 0;
+    background: url(../src/home-apply-sectionbg.png) no-repeat;
+    z-index: -1;
+}
+
+.header h1 {
+    margin-top: 170px;
+}
+
+button {
+    position: relative;
+    display: block;
+    width: 50%;
+    margin: 30px auto;
+
+    font-family: "Lato", sans-serif;
+    font-size: 40px;
+    font-weight: bold;
+    color: #F5F2EE;
+
+    padding: 20px;
+
+    background-color: transparent;
+    border: solid 6px #FFB300;
+    border-radius: 10px;
+
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 100px;
+}
+
+button:hover {
+    box-shadow: inset 100px 0 0 0 #FFB300;
+}
+
+h3 {
+    font-family: "Lato", sans-serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #F5F2EE;
+
+    width: fit-content;
+    display: block;
+
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1000px) {
+    button {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 700px) {
+    button {
+        width: 90%;
+    }
+}
+@media screen and (max-width: 500px) {
+    button {
+        width: 95%;
+    }
+}
+@media screen and (max-width: 700px) {
+    button {
+        width: 90%;
+    }
+}

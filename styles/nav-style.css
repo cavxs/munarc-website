@@ -1,0 +1,517 @@
+header{
+    position: fixed;
+    width: 100%;
+    height: 80px;
+    z-index: 10;
+    top: 0;
+}
+
+.nav {
+    left: 0;
+    top: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+
+    transition: all 0.5s;
+}
+
+.nav .nav-container {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+.nav .nav-container .sm {
+    display: none;
+}
+
+.nav .nav-container .string {
+    display: none;
+    position: fixed;
+    width: 50px;
+    height: 70px;
+    background-color: #000;
+    right: 80px;
+    left: auto;
+    top: 120px;
+    transform: translateX(50%);
+    z-index: -1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.nav .nav-container .string img {
+    position: absolute;
+    left: 50%;
+    bottom: 10px;
+    transform: translateX(-50%);
+}
+
+header.slided-up .nav {
+    transform: translateY(calc(-100% - 150px));
+}
+
+.nav .nav-container > ul {
+    position: relative;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    width: 90%; height: 100%;
+    justify-content: space-between;
+    align-items: center;
+
+    transition: all 0.5s;
+}
+
+.nav .nav-container > ul .img-container {
+    position: relative;
+    width: fit-content;
+    height: fit-content;
+}
+
+.nav .nav-container > ul .img-container img {
+    position: absolute;
+    pointer-events: none;
+    left: 50%;
+    top: -30px; 
+    transform: translateX(-50%);
+
+    transition: all 0.5s;
+}
+
+.nav .nav-container > ul > li {
+    display: flex;
+    height: 100%;
+    position: relative;
+    transition: all 0.5s;
+    align-items: center;
+}
+
+.nav .nav-container > ul > li > a {
+    font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 18pt;
+    font-weight: 300;
+    color: white;
+    text-decoration: none;
+
+    transition: all 0.3s;
+}
+
+.nav .nav-container > ul > li ul .back {
+    display: none;
+}
+
+.nav .nav-container > ul > li:last-child:hover > a {
+    box-shadow: 0 0 20px rgba(253, 253, 105, 1);
+}
+
+.nav .nav-container > ul > li:last-child > a {
+    font-family: "Quicksand", sans-serif;
+    color: #140B02;
+    background-color: #FDFD69;
+    border-radius: 10px;
+    padding: 10px 10px;
+}
+
+.nav .nav-container > ul > li:last-child:hover > a {
+    color: #140B02;
+}
+
+.nav .nav-container > ul > li > a:hover {
+    color: yellow;
+}
+
+.nav .nav-container > ul > li:hover ul {
+    transform: translateY(0);
+}
+
+.nav .nav-container > ul > li ul {
+    position: absolute;
+    top: 100%;
+    width: 200%;
+    left: calc(-50% - 20px);
+    display: block;
+    list-style: none;
+    background-color: black;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+    padding: 0 20px 10px;
+
+    transform: translateY(calc(-100% - 100px));
+
+    transition: transform 0.2s;
+    z-index: -1;
+}
+
+.nav .nav-container > ul > li ul li {
+    width: fit-content;
+    display: block;
+    margin: 4% auto;
+    text-align: center;
+}
+
+.nav .nav-container > ul > li ul li a {
+    font-size: "Quicksand", sans-serif;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    font-size: 20px;
+}
+
+.nav .nav-container > ul > li ul li a:hover {
+    color: #FDFD69;
+}
+
+
+.nav.affix {
+    background-color: transparent;
+}
+
+.nav.hidden .nav-container ul {
+    opacity: 0.4;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+.nav.hidden .nav-container li {
+    opacity: 0.4;
+    pointer-events: none;
+    transition: opacity 1s;
+}
+
+.nav.hidden .nav-container .img-container img {
+    opacity: 0.4;
+    transition: opacity 1s;
+}
+
+.nav .nav-container > ul > li:nth-child(3) {
+    margin-right: 100px;
+}
+
+.nav .nav-container > ul > li:nth-child(5) {
+    margin-left: 100px;
+}
+
+.nav.affix .nav-container > ul > li:nth-child(3) { /*done*/
+    margin-right: 0;
+}
+
+.nav.affix .nav-container > ul > li:nth-child(5) { /*done*/
+    margin-left: 0;
+}
+
+.nav.affix .nav-container > ul { /*done*/
+    width: 70%;
+}
+
+.nav.affix .nav-container > ul .img-container img { /*done*/
+    top: 125px;
+}
+
+
+@media screen and (min-width:540px) and (max-width: 1024px) {
+    .nav .nav-container > ul {
+        width: 96%;
+    }
+}
+
+@media screen and (max-width: 870px) {
+    header.slided-up .nav {
+        transform: none;
+    }
+    .nav.hidden .nav-container ul {
+        opacity: 1;
+    }
+    .nav.hidden .nav-container .img-container img {
+        opacity: 1;
+    }
+    .nav.hidden .nav-container li {
+        opacity: 1;
+    }
+    .nav.affix {
+        background-color: black;
+    }
+    .nav.affix .nav-container > ul > li:nth-child(3) { /*done*/
+        margin-right: 50px;
+    }
+    
+    .nav.affix .nav-container > ul > li:nth-child(5) { /*done*/
+        margin-left: 50px;
+    }
+    
+    .nav.affix .nav-container > ul { /*done*/
+        width: 90%;
+    }
+    
+    .nav.affix .nav-container > ul .img-container img { /*done*/
+        top: 0;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width: 870px) {
+    .nav .nav-container > ul > li:nth-child(3) {
+        margin-right: 50px;
+    }
+    .nav .nav-container > ul > li:nth-child(5) {
+        margin-left: 50px;
+    }
+    .nav .nav-container > ul .img-container img {
+        top: -25px;
+        width: 100px;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width: 730px) {
+    .nav .nav-container > ul > li > a {
+        font-size: 20px;
+    }
+    .nav .nav-container > ul > li ul li a {
+        font-size: 16px;
+    }
+    .nav .nav-container > ul > li ul li {
+        margin: 5px auto;
+    }
+}
+
+@media screen and (min-width:540px) and (max-width: 635px) {
+    /* Change of Committees to Comm. and Conference to Conf. DONE */
+
+}
+
+@media screen and (max-width: 540px) {
+    /* Mobile design */
+
+    .nav .nav-container > ul > li {
+        display: block;
+        margin: 20px 0;
+        position: relative;
+        height: fit-content;
+        overflow: hidden;
+    }
+    .nav .nav-container > ul > li > a {
+        display: block;
+        width: fit-content;
+        font-weight: bold;
+        transform: translateY(-100%);
+        transition: transform 0.1s;
+    }
+
+    .nav .nav-container .sm {
+        width: fit-content;
+        display: flex;
+        flex-direction: column;
+        position: fixed;
+        right: 80px;
+        top: 80px;
+    }
+
+    .nav .nav-container .sm a {
+        position: absolute;
+        width: fit-content;
+        top: 0;
+        transform: translateX(-50%);
+        transition: all 0.3s;
+    }
+
+    .nav .nav-container > ul > li > a {
+        display: block;
+    }
+
+    .nav .nav-container > ul > li:nth-child(5) {
+        margin-left: 0;
+    }
+
+    .nav.affix .nav-container > ul > li:nth-child(5) { 
+        margin-left: 0;
+    }
+
+    .nav .nav-container > ul > li ul {
+        position: fixed;
+        display: block;
+        width: 60%;
+        left: 15%;
+        top: 80px;
+        height: fit-content;
+        pointer-events: none;
+        z-index: 2;
+        padding: 0;
+        background-color: transparent;
+    }
+
+    .nav {
+        right: 20px; left: auto;
+        top: 20px;
+        position: fixed;
+        width: 120px;
+        height: 120px;
+        background-color: black;
+        transition: all 0.5s;
+        border-radius: 100px;
+    }
+
+    .nav .nav-container {
+        top: 50px;
+    }
+
+    .nav .nav-container .navlinks {
+        position: fixed;
+        display: block;
+        width: 60%;
+        left: 15%;
+        top: 80px;
+        height: fit-content;
+        pointer-events: none;
+        z-index: 2;
+    }
+
+    
+    .nav .nav-container > ul .img-container {
+        position: fixed;
+        top: 80px;
+        left: auto;
+        right: 80px;
+    }
+    .nav .nav-container > ul .img-container img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100px;
+        transform: translateX(-50%) translateY(-50%);
+    }
+    .nav .nav-container > ul > li ul .back {
+        display: block;
+    }
+    
+    .nav .nav-container .string {
+        display: block;
+        transition: all 0.5s;
+    }
+
+    header.mobopen .nav {
+        position: fixed;
+        right: -20px;
+        left: auto;
+        top: -50px;
+        width: 115%;
+        height: 80%;
+        border-radius: 100px;
+    }
+
+    header.mobopen .nav .nav-container .navlinks a {
+        pointer-events: all;
+        text-align: left;
+    }
+
+    header.mobopen .nav .nav-container .string {
+        height: 70%;
+    }
+    header.mobopen .nav .nav-container > ul > li > a{ 
+        transition: transform 0.3s;
+    }
+    header.mobopen .nav .nav-container > ul > li:nth-child(1) > a {
+        transform: translateY(0);
+        transition-delay: 0.1s;
+    }
+    header.mobopen .nav .nav-container > ul > li:nth-child(2) > a {
+        transform: translateY(0);
+        transition-delay: 0.3s;
+    }
+    header.mobopen .nav .nav-container > ul > li:nth-child(3) > a {
+        transform: translateY(0);
+        transition-delay: 0.5s;
+    }
+    header.mobopen .nav .nav-container > ul > li:nth-child(5) > a {
+        transform: translateY(0);
+        transition-delay: 0.7s;
+    }
+    header.mobopen .nav .nav-container > ul > li:nth-child(6) > a {
+        transform: translateY(0);
+        transition-delay: 0.9s;
+    }
+    header.mobopen .nav .nav-container > ul > li:nth-child(7) > a {
+        transform: translateY(0);
+        transition-delay: 1.2s;
+    }
+
+    header.mobopen .nav .nav-container .sm a {
+        transition: all 0.3s;
+        transform: translateX(-50%);
+    }
+    header.mobopen .nav .nav-container .sm a:nth-child(1) {
+        top: 100px;
+        transform: translateX(-50%) rotate(360deg);
+    }
+    header.mobopen .nav .nav-container .sm a:nth-child(2) {
+        top: 170px;
+        transform: translateX(-50%) rotate(360deg);
+    }
+    header.mobopen .nav .nav-container .sm a:nth-child(3) {
+        top:240px;
+        transform: translateX(-50%) rotate(360deg);
+    }
+
+    header.mobopen .nav.selection .nav-container > ul > li > a {
+        transform: translateY(-100%);
+        transition: 0.1s;
+    }
+    header.mobopen .nav.selection .nav-container > ul > li.navselection > ul {
+        display: block;
+        transform: translateY(0);
+    }
+
+    .nav .nav-container > ul > li ul li {
+        display: block;
+        margin: 20px 0;
+        position: relative;
+        height: fit-content;
+        overflow: hidden;
+        text-align: left;
+    }
+
+    .nav .nav-container > ul > li ul li a {
+        display: block;
+        transform: translateY(-100%);
+        transition: 0.2s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li a {
+        transform: translateY(0);
+        transition: 0.3s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(1) a {
+        transition-delay: 0.1s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(2) a {
+        transition-delay: 0.2s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(3) a {
+        transition-delay: 0.3s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(4) a {
+        transition-delay: 0.4s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(5) a {
+        transition-delay: 0.5s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(6) a {
+        transition-delay: 0.6s;
+    }
+
+    .nav .nav-container > ul > li.navselection ul li:nth-child(7) a {
+        transition-delay: 0.7s;
+    }
+
+    header.mobopen .nav.selection .nav-container > ul > li.navselection > ul li {
+
+    }
+}

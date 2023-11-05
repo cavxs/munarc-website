@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400&family=Lora&family=Open+Sans:wght@300&family=Quicksand:wght@400;700&family=Coda:wght@800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    touch-action: manipulation;
+}
+
+*::selection {
+    background: #dacb8d;
+    color: #fff;
+} 
+
+img {
+    user-drag: none; 
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-drag: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html, body {
+    box-sizing: border-box;
+}
+
+body {
+    position: relative;
+    background-color: #F5F2EE;
+	min-height:100%;
+    padding-bottom: 20px;
+    z-index: -2;
+    font-family: "Quicksand", sans-serif;
+    font-size: 62.5%;
+    font-size: 10px;
+    color: white;
+}
+
+.heading1 {
+    display: block;
+    width: fit-content;
+    font-family: "Quicksand", sans-serif;
+    font-weight: 700;
+    font-size: 40pt;
+    color: #343D45;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.heading1::after {
+    display: block;
+    border-radius: 100px;
+    background-color: #dacb8d;
+    width: 60%;
+    height: 5px;
+    content: "";
+    margin: 0 auto;
+}
+
+div.hexagon {
+    position: relative;
+    width: 300px; 
+    height: 173.21px;
+    background-color: #64C7CC;
+    margin: 86.60px 0;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+  
+div.hexagon:before,
+div.hexagon:after {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    width: 212.13px;
+    height: 212.13px;
+    -webkit-transform: scaleY(0.5774) rotate(-45deg);
+    -ms-transform: scaleY(0.5774) rotate(-45deg);
+    transform: scaleY(0.5774) rotate(-45deg);
+    background-color: inherit;
+    left: 43.9340px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.15);
+}
+  
+div.hexagon:before {
+    top: -106.0660px;
+}
+  
+div.hexagon:after {
+    bottom: -106.0660px;
+}
+
+div.hexagon span {
+    display: block;
+    position: absolute;
+    top:0px;
+    left: 0;
+    width:300px;
+    height:173.2051px;
+    z-index: 2;
+    background: inherit;
+}
+
+
+
+/* 
+.page-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    
+    z-index: -1;
+}
+
+.page-bg .bg-img {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: url(../src/beehive-pattern.jpg) repeat fixed #ededed;
+}
+
+.page-bg .bg-img-overlay {
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(255, 255, 0, 0.2);
+    z-index: 1;
+} */
